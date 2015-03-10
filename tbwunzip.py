@@ -1,11 +1,11 @@
-## tbwunzip reads from a password file in an attempt to crack the password on a password protected zip archive
+## crackzip reads from a password file in an attempt to crack the password on a password protected zip archive
 ## it also reports on passwords that pass the initial checksum but fail when attempting to read data
 ## it also allows you to extract the file if it determines it found the correct password
 ## it needs to be run in the same directory as the archive
 ## the code is mostly just an elaboration of the code from zipfile library built into Python
 ## logging into is output to a file named "pwlog.txt"
-## syntax: tbwunzip [archive] [password file]
-## example: tbwunzip myarchive.zip passwords.txt
+## syntax: crackzip [archive] [password file]
+## example: crackzip myarchive.zip passwords.txt
 
 import sys, zipfile, os, shutil , io, struct, zlib  
 
